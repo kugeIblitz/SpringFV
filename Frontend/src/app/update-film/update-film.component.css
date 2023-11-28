@@ -1,0 +1,86 @@
+/* Reset some default styles */
+body,
+h1,
+form,
+div,
+label,
+select,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Main container styling */
+.main-block {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+  margin-top: 20px;
+}
+
+/* Input and select styling */
+.account-type {
+  position: relative;
+}
+
+.account-type label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.account-type input,
+.account-type select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* File input styling */
+.col-sm-16 input[type="file"] {
+  margin-top: 10px;
+}
+
+/* Image styling */
+.col-sm-16 img {
+  margin-top: 10px;
+}
+
+/* Button styling */
+.btn-block {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .main-block {
+    max-width: 100%;
+  }
+}

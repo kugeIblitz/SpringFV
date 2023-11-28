@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div class="main-block">
+      <h1>UpdateFilms</h1>
+      <form action="/">
+        <hr />
+        <div class="account-type">
+          <label id="icon" for="name"><i class="fas fa-user"></i></label>
+          IdFilms
+          <input
+            type="text"
+            [(ngModel)]="currentFilm.idFilm"
+            name="idFilm"
+            class="form-control"
+            placeholder="IdFilms" />
+        </div>
+        <hr />
+        <div class="account-type">
+          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+          NomFilms
+          <input
+            type="text"
+            [(ngModel)]="currentFilm.nomFilm"
+            name="nomFilm"
+            class="form-control"
+            placeholder="NomFilms" />
+        </div>
+        <hr />
+        <div class="account-type">
+          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+          GenreFilms
+          <select
+            type="text"
+            [(ngModel)]="updatedGenreId"
+            name="GenreFilm"
+            class="form-control"
+            placeholder="GenreFilms">
+            <option *ngFor="let gen of Genre" [value]="gen.idGenre">
+              {{ gen.nomGenre }}
+            </option>
+          </select>
+        </div>
+        <div class="account-type">
+          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+          descriptionFilms
+          <input
+            type="text"
+            [(ngModel)]="currentFilm.descriptionFilm"
+            name="descriptionFilm"
+            class="form-control"
+            placeholder="descriptionFilms" />
+        </div>
+        <div class="form-group">
+          <label id="icon" for="name"><i class="fas fa-unlock-alt"></i></label>
+          DateFilms
+          <input
+            type="date"
+            [(ngModel)]="currentFilm.dateCreation"
+            (ngModelChange)="currentFilm.dateCreation = $event"
+            name="dateCreation"
+            placeholder="DateFilms" />
+        </div>
+        <div class="col-sm-16 col-md-16 col-lg-16">
+          <label class="mb-2">Image :</label>
+          <input
+            type="file"
+            (change)="onImageUpload($event)"
+            class="form-control" />
+        </div>
+        <div class="col-sm-16 col-md-16 col-lg-16">
+          <img
+            [src]="myImage"
+            class="card-img-top img-fluid rounded-start"
+            style="width: 500px; height: 300px" />
+        </div>
+
+        <div class="btn-block">
+          <button
+            type="submit"
+            (click)="updateFilm()"
+            class="btn btn-success"
+            routerLink="/updateFilms">
+            Update
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

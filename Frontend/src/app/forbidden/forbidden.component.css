@@ -1,0 +1,30 @@
+/* Add this styling to your forbidden.css or a separate CSS file */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.forbidden-container {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #dc3545; /* Red color for the heading */
+}
+
+p {
+  color: #333;
+  margin-top: 10px;
+}
+
+/* You can customize the styles further based on your preferences */

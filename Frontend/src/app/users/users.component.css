@@ -1,0 +1,78 @@
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Style for the table header */
+thead {
+  background-color: #f2f2f2;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style for alternating rows in the table body */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style for the "Actions" column buttons */
+td button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Style for the "Manage roles" button */
+td button:nth-child(1) {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+
+/* Style for the "Delete" button */
+td button:nth-child(2) {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid #ddd;
+  }
+
+  table td {
+    display: block;
+    text-align: left;
+    border: none;
+    position: relative;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    padding-right: 15px;
+    font-weight: bold;
+  }
+}

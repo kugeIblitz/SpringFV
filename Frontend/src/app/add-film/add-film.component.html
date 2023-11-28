@@ -1,0 +1,93 @@
+<div class="container forget-password">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="text-center">
+            <h2 class="text-center">Ajouter film</h2>
+            <form>
+              <div class="form-group">
+                <div class="input-group">
+                  ID Film<input
+                    type="text"
+                    [(ngModel)]="newFilm.idFilm"
+                    name="idFilm"
+                    class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  Nom Film<input
+                    type="text"
+                    [(ngModel)]="newFilm.nomFilm"
+                    name="nomFilm"
+                    class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  Genre
+                  <select
+                    type="text"
+                    [(ngModel)]="newIdGenre"
+                    name="Genre"
+                    class="form-control">
+                    <option *ngFor="let gen of Genre" [value]="gen.idGenre">
+                      {{ gen.nomGenre }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  Description
+                  <textarea
+                    [(ngModel)]="newFilm.descriptionFilm"
+                    name="descriptionFilm"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Enter description..."></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  Date Films<input
+                    type="date"
+                    [(ngModel)]="newFilm.dateCreation"
+                    name="dateCreation"
+                    class="form-control"
+                    placeholder="DateFilms" />
+                </div>
+              </div>
+              <div class="form-group">
+                <img
+                  [src]="imagePath"
+                  class="card-img-top img-fluid rounded-start"
+                  style="width: 500px; height: 300px" />
+              </div>
+
+              <div class="form-group">
+                <label class="mb-2">Image :</label>
+                <input
+                  type="file"
+                  (change)="onImageUpload($event)"
+                  name="logo"
+                  class="form-control" />
+              </div>
+
+              <div class="mt-2">
+                <button
+                  type="submit"
+                  (click)="addFilm()"
+                  class="btn btn-secondary"
+                  routerLink="/Film">
+                  Ajouter
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-MicrosserviceApplication<microsservice>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.amine.microsservice.MicrosserviceApplication",
+      "projectName": "microsservice",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

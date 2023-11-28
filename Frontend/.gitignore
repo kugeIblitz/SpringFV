@@ -1,0 +1,15 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts
+/dist/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore Angular CLI configuration
+.angular-cli.json
+
+# Ignore TypeScript configuration
+tsconfig.json

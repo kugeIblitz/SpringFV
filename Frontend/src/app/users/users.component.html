@@ -1,0 +1,36 @@
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Username</th>
+      <th>Roles</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of users">
+    <tr>
+      <td>{{ user.user_id }}</td>
+      <td>{{ user.username }}</td>
+      <td>
+        <span *ngFor="let role of user.roles">
+          {{ role.role }}
+        </span>
+      </td>
+      <td>
+        <span *ngIf="user.enabled === true">Active</span>
+        <span *ngIf="user.enabled === false">Disabled</span>
+      </td>
+      <td>
+        <button
+          *ngIf="authService.isAdmin()"
+          [routerLink]="['/add-role-to-user', user.user_id]">
+          Manage roles
+        </button>
+        <button *ngIf="authService.isAdmin()" (click)="deleteUser(user)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

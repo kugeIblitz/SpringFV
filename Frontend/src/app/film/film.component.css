@@ -1,0 +1,62 @@
+/* film.component.css */
+
+/* Styles for the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2; /* Light gray background for header */
+}
+
+/* Styles for table cells */
+.styled-table td {
+  background-color: #fff; /* White background for cells */
+}
+
+/* Styles for buttons in table cells */
+.btn {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styles for the "Supprimer" button */
+.btn-supprimer {
+  background-color: #dc3545; /* Red color for "Supprimer" button */
+}
+
+.btn-supprimer:hover {
+  background-color: #c82333; /* Darker red color on hover */
+}
+
+/* Styles for the "Modifier" button */
+.btn-modifier {
+  background-color: #28a745; /* Green color for "Modifier" button */
+}
+
+.btn-modifier:hover {
+  background-color: #218838; /* Darker green color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .styled-table th,
+  .styled-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

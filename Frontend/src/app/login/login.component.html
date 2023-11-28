@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert alert-danger" *ngIf="isInvalid">
+        <strong>Invalid Username or Password</strong>
+      </div>
+
+      <div class="alert alert-success" *ngIf="isEnabled">
+        <strong>Activate Account</strong>
+        <input [(ngModel)]="code" type="text" placeholder="Enter Code" />
+        <button
+          type="button"
+          (click)="onActivate()"
+          class="btn btn-primary mt-2">
+          Activate
+        </button>
+      </div>
+
+      <h3>Login</h3>
+      <form (submit)="onLoggedIn()">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            [(ngModel)]="user.username"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="user.password"
+            required />
+        </div>
+
+        <div class="py-3">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <button
+            type="button"
+            class="btn btn-primary btn-signup"
+            routerLink="/register">
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<div class="custom-container">
+  <form class="custom-form">
+    <div class="custom-form-group">
+      <label>Nom Film</label>
+      <input
+        class="custom-input"
+        #searchTerm
+        (keyup)="onKeyUp(searchTerm.value)" />
+    </div>
+  </form>
+
+  <table class="custom-styled-table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Date Création</th>
+        <th>Genre</th>
+        <th>Supprimer</th>
+        <th>Modifier</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let Film of Film">
+      <tr>
+        <td>{{ Film.idFilm }}</td>
+        <td>{{ Film.nomFilm }}</td>
+        <td>{{ Film.descriptionFilm }}</td>
+        <td>{{ Film.dateCreation | date : "dd/MM/yyyy" }}</td>
+        <td>{{ Film.genre.nomGenre }}</td>
+        <td><a class="custom-btn">Supprimer</a></td>
+        <td>
+          <a class="custom-btn" [routerLink]="['/updateFilm', Film.idFilm]"
+            >Modifier</a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
